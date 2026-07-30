@@ -1,0 +1,24 @@
+{
+  "name": "gusreyes01-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gustavo Reyes' accessible, dependency-light GitHub Pages profile.",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:html": "html-validate index.html 404.html",
+    "lint:css": "stylelint \"assets/**/*.css\"",
+    "lint": "npm run lint:html && npm run lint:css && npm run format:check",
+    "test": "node --test tests/site.test.mjs",
+    "check": "npm run lint && npm test"
+  },
+  "devDependencies": {
+    "html-validate": "11.6.0",
+    "prettier": "3.9.6",
+    "stylelint": "17.14.1",
+    "stylelint-config-standard": "40.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
